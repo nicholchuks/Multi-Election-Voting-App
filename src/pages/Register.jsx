@@ -8,7 +8,6 @@ const Register = () => {
     password: "",
     password2: "",
   });
-  console.log(userData)
 
   const changeInputHandler = (e) => {
     setUserData((prevState) => {

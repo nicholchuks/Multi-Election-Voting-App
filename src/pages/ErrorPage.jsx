@@ -6,11 +6,11 @@ const ErrorPage = () => {
   const navigate = useNavigate();
 
   //redirect user to the previous page after 6 seconds
-  // useEffect(() => {
-  //   setTimeout(() => {
-  //     navigate(-1);
-  //   }, 6000);
-  // });
+  useEffect(() => {
+    setTimeout(() => {
+      navigate(-1);
+    }, 6000);
+  });
   return (
     <section className="errorPage">
       <div className="errorPage__container">
