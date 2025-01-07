@@ -20,7 +20,7 @@ const Navbar = () => {
   };
 
   const changethemeHandler = () => {
-    if (localStorage.getitem("voting-app-theme") === "dark") {
+    if (localStorage.getItem("voting-app-theme") === "dark") {
       localStorage.setItem("voting-app-theme", "");
     } else {
       localStorage.setItem("voting-app-theme", "dark");
