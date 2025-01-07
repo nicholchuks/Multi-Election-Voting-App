@@ -200,6 +200,7 @@ nav {
 .nav__logo {
   font-size: 1.2rem;
   font-weight: 700;
+  text-wrap: nowrap;
 }
 
 .nav__toggle-btn {
@@ -278,38 +279,6 @@ nav {
   border-radius: var(--radius-1);
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* MEDIA QUERIES (small screens) */
 
 @media screen and (max-width: 600px) {
@@ -351,5 +320,9 @@ nav {
 
   .errorPage__container {
     width: 100%;
+  }
+
+  .register__container {
+    padding: 3rem 1.5rem;
   }
 }
