@@ -8,7 +8,7 @@ import { AiOutlineClose } from "react-icons/ai";
 const Navbar = () => {
   const [showNav, setShowNav] = useState(false);
   const [darkTheme, setDarkTheme] = useState(
-    localStorage.getItem("voting-app-theme")
+    localStorage.getItem("voting-app-theme") || ""
   );
 
   const closeNavMenu = () => {
@@ -18,6 +18,8 @@ const Navbar = () => {
       setShowNav(true);
     }
   };
+
+  //fuction to change toggle theme
 
   const changethemeHandler = () => {
     if (localStorage.getItem("voting-app-theme") === "dark") {
@@ -53,7 +55,7 @@ const Navbar = () => {
             </menu>
           )}
           <button className="theme__toggle-btn" onClick={changethemeHandler}>
-            <IoIosMoon />
+            {darkTheme ? <IoMdSunny /> : <IoIosMoon />}
           </button>
           <button
             className="nav__toggle-btn"
