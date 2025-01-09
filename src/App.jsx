@@ -5,10 +5,10 @@ import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Results from "./pages/Results";
 import ElectionDetails from "./pages/ElectionDetails";
-import Candidate from "./pages/Candidate";
 import Elections from "./pages/Elections";
 import Congrat from "./pages/Congrat";
 import Logout from "./pages/Logout";
+import Candidates from "./pages/Candidates";
 
 const router = createBrowserRouter([
   {
@@ -38,7 +38,7 @@ const router = createBrowserRouter([
       },
       {
         path: "elections/:id/candidates",
-        element: <Candidate />,
+        element: <Candidates />,
       },
       {
         path: "congrat",
