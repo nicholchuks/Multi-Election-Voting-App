@@ -41,7 +41,7 @@ const router = createBrowserRouter([
         element: <Candidates />,
       },
       {
-        path: "congrat",
+        path: "congrats",
         element: <Congrat />,
       },
       {

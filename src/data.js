@@ -27,7 +27,7 @@ export const elections = [
     title: "Legon SRC Presidential Elections 2024",
     description:
       "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos molestiae aliquid, suscipit sint aliquam fugiat facere ut aut voluptatibus unde placeat architecto atque dolores nulla doloremque expedita eligendi necessitatibus? Ratione.",
-    thumbnail: Thumbnail1,
+    thumbnail: Thumbnail2,
     candidates: ["c5", "c6", "c7"],
     voters: [],
   },
@@ -37,7 +37,7 @@ export const elections = [
     title: "Stanford Presidential Elections 2025",
     description:
       "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos molestiae aliquid, suscipit sint aliquam fugiat facere ut aut voluptatibus unde placeat architecto atque dolores nulla doloremque expedita eligendi necessitatibus? Ratione.",
-    thumbnail: Thumbnail1,
+    thumbnail: Thumbnail3,
     candidates: [],
     voters: [],
   },
