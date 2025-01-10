@@ -1,6 +1,14 @@
 import React from "react";
+import { useDispatch } from "react-redux";
+import { UiActions } from "../store/ui-slice";
 
 const Candidate = ({ image, id, motto, fullName }) => {
+  const dispatch = useDispatch();
+
+  const openCandidateModal = () => {
+    dispatch(UiActions.openVoteCandidateModal());
+  };
+
   return (
     <article className="candidate">
       <div className="candidate__image">
@@ -12,7 +20,9 @@ const Candidate = ({ image, id, motto, fullName }) => {
       <small>
         {motto?.length > 25 ? motto.substring(0, 25) + "..." : motto}
       </small>
-      <button className="btn primary">Vote</button>
+      <button className="btn primary" onClick={openCandidateModal}>
+        Vote
+      </button>
     </article>
   );
 };
