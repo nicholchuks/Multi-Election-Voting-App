@@ -547,13 +547,10 @@ nav {
   margin: 0.5rem 0 1.2rem;
 }
 
-
 /************* ELECTION PAGE********************/
 
 .elections {
   margin: 5rem 0;
-
-
 }
 
 .elections__header {
@@ -582,6 +579,7 @@ nav {
 
 .election__image {
   max-height: 13rem;
+  width: 100%;
 }
 
 .election:hover {
@@ -593,8 +591,8 @@ nav {
 }
 
 .election__info h4 {
-margin-bottom: 0.7rem;
-color: var(--color-primary);
+  margin-bottom: 0.7rem;
+  color: var(--color-primary);
 }
 
 .election__cta {
@@ -602,6 +600,32 @@ color: var(--color-primary);
   gap: 1.2em;
   margin-top: 1rem;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -738,4 +762,16 @@ color: var(--color-primary);
   .modal__content {
     width: var(--container-w-sm);
   }
+
+  .election {
+    grid-template-columns: 1fr;
+  }
+}
+
+.election__info {
+  padding: 2rem 1rem;
+}
+
+.election__image {
+  height: 100%;
 }

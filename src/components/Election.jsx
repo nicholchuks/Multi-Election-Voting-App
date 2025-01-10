@@ -18,7 +18,7 @@ const Election = ({ id, title, description, thumbnail }) => {
             : description}
         </p>
         <div className="election__cta">
-          <Link to={`elections/${id}`} className="btn sm">
+          <Link to={`/elections/${id}`} className="btn sm">
             View
           </Link>
           <button className="btn sm primary">Edit</button>
