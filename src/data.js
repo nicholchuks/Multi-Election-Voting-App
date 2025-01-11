@@ -118,7 +118,7 @@ export const candidates = [
 export const voters = [
   {
     id: "v1",
-    fullNmae: "Ernest Achiever",
+    fullName: "Ernest Achiever",
     email: "achiver@gmail.com",
     password: "achiever123",
     isAdmin: true,
@@ -127,7 +127,7 @@ export const voters = [
 
   {
     id: "v2",
-    fullNmae: "Dories Lartey",
+    fullName: "Dories Lartey",
     email: "doris@gmail.com",
     password: "doris123",
     isAdmin: false,
@@ -136,7 +136,7 @@ export const voters = [
 
   {
     id: "v3",
-    fullNmae: "Daniel Vinyo",
+    fullName: "Daniel Vinyo",
     email: "daniel@gmail.com",
     password: "daniel123",
     isAdmin: false,
@@ -145,7 +145,7 @@ export const voters = [
 
   {
     id: "v4",
-    fullNmae: "Diana Ayi",
+    fullName: "Diana Ayi",
     email: "diana@gmail.com",
     password: "diana123",
     isAdmin: true,
