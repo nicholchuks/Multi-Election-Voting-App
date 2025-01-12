@@ -17,7 +17,7 @@ const ErrorPage = () => {
         <img src={Image} alt="error_image" />
         <h1>404</h1>
         <p>
-          This page does not exist, You will be directed to the previous page
+          This page does not exist, You will be redirected to the previous page
           shortly.
         </p>
       </div>
