@@ -12,13 +12,12 @@ const ConfirmVote = () => {
     dispatch(UiActions.closeVoteCandidateModal())
   }
 
-//Get selected candidate id from redux store
 
+//Get selected candidate id from redux store
 const selectedVoteCandidate = useSelector(state => state.vote.selectedVoteCandidate)
 
 
   //Get the selected candidate
-
   const fetchCandidate = () => {
     candidates.find((candidate) => {
       if (candidate.id === selectedVoteCandidate) {

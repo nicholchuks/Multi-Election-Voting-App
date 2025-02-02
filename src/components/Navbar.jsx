@@ -13,6 +13,7 @@ const Navbar = () => {
     localStorage.getItem("voting-app-theme") || ""
   );
 
+  //function to close nav on small screens when menu link is clicked
   const closeNavMenu = () => {
     if (window.innerWidth < 600) {
       setShowNav(false);
@@ -22,7 +23,6 @@ const Navbar = () => {
   };
 
   //fuction to change toggle theme
-
   const changethemeHandler = () => {
     if (localStorage.getItem("voting-app-theme") === "dark") {
       localStorage.setItem("voting-app-theme", "");

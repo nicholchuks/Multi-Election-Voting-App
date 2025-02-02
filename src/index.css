@@ -148,7 +148,7 @@ button {
   color: var(--color-gray-0);
 }
 
-/* Error Page */
+/************* Error Page **************/
 
 .errorPage {
   display: grid;
@@ -352,7 +352,6 @@ nav {
   gap: 1rem;
   align-items: center;
   justify-content: space-between;
-  gap: 1rem;
 }
 
 .result__candidate-loader {
@@ -811,8 +810,9 @@ nav {
 }
 
 .voters__table thead tr {
-  display: flex;
-  flex-direction: column;
+  display: none;
+  /* display: flex; */
+  /* flex-direction: column; */
 }
 
 .voters__table tbody tr {
@@ -820,7 +820,6 @@ nav {
   flex-direction: column;
   width: 100%;
 }
-
 
 }
 

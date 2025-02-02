@@ -25,6 +25,7 @@ const Login = () => {
             name="email"
             placeholder="Email Address"
             autoComplete="true"
+            autoFocus
             onChange={changeInputHandler}
           />
           <input

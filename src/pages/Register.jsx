@@ -9,6 +9,7 @@ const Register = () => {
     password2: "",
   });
 
+  //Function to change our control input
   const changeInputHandler = (e) => {
     setUserData((prevState) => {
       return { ...prevState, [e.target.name]: e.target.value };
