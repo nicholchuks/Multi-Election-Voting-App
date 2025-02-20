@@ -1,13 +1,17 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import axios from "axios";
 
 const Register = () => {
   const [userData, setUserData] = useState({
-    fullname: "",
+    fullName: "",
     email: "",
     password: "",
     password2: "",
   });
+
+  const [error, setError] = useState("");
+  const navigate = useNavigate();
 
   //Function to change our control input
   const changeInputHandler = (e) => {
@@ -15,15 +19,34 @@ const Register = () => {
       return { ...prevState, [e.target.name]: e.target.value };
     });
   };
+
+  const registerVoter = async (e) => {
+    e.preventDefault();
+    console.log("Sending voter data:", userData);
+
+    try {
+      await axios.post(
+        `${import.meta.env.VITE_API_URL}/voters/register`,
+        userData,
+        {
+          headers: { "Content-Type": "application/json" },
+        }
+      );
+      navigate("/");
+    } catch (err) {
+      setError(err.response.data.message);
+    }
+  };
+
   return (
     <section className="register">
       <div className="container register__container">
         <h2>Sign Up</h2>
-        <form>
-          <p className="form__error-message">Any error from the backend</p>
+        <form onSubmit={registerVoter}>
+          {error && <p className="form__error-message">{error}</p>}
           <input
             type="text"
-            name="fullname"
+            name="fullName"
             placeholder="Full Name"
             autoComplete="true"
             autoFocus
