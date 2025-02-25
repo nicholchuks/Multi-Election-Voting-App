@@ -13,7 +13,7 @@ const Navbar = () => {
     localStorage.getItem("voting-app-theme") || ""
   );
 
- const token = useSelector(state => state?.vote?.currentVoter?.token)
+  const token = useSelector((state) => state?.vote?.currentVoter?.token);
 
   //function to close nav on small screens when menu link is clicked
   const closeNavMenu = () => {
@@ -61,12 +61,15 @@ const Navbar = () => {
           <button className="theme__toggle-btn" onClick={changethemeHandler}>
             {darkTheme ? <IoMdSunny /> : <IoIosMoon />}
           </button>
-          <button
-            className="nav__toggle-btn"
-            onClick={() => setShowNav(!showNav)}
-          >
-            {showNav ? <AiOutlineClose /> : <HiOutlineBars3 />}
-          </button>
+          {token && (
+            <button
+              className="nav__toggle-btn"
+              onClick={() => setShowNav(!showNav)}
+            >
+              {showNav ? <AiOutlineClose /> : <HiOutlineBars3 />}
+              
+            </button>
+          )}
         </div>
       </div>
     </nav>

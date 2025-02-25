@@ -5,16 +5,15 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
 const Results = () => {
-  
-   const token = useSelector(state => state?.vote?.currentVoter?.token)
-   const navigate = useNavigate()
+  const token = useSelector((state) => state?.vote?.currentVoter?.token);
+  const navigate = useNavigate();
 
-//ACCESS CONTROL
-useEffect(()=> {
-  if(!token) {
-    navigate("/")
-  }
-}, [])
+  //ACCESS CONTROL
+  useEffect(() => {
+    if (!token) {
+      navigate("/");
+    }
+  }, []);
 
   const [elections, setElections] = useState([]);
 

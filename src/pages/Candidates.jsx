@@ -4,20 +4,19 @@ import Candidate from "../components/Candidate";
 import ConfirmVote from "../components/ConfirmVote";
 import { useSelector } from "react-redux";
 import axios from "axios";
-import{useNavigate} from "react-router-dom"
+import { useNavigate } from "react-router-dom";
 
-const Candidates = () => {  
+const Candidates = () => {
   const token = useSelector((state) => state?.vote?.currentVoter?.token);
-  
-  const navigate = useNavigate()
 
-//ACCESS CONTROL
-useEffect(() => {
-  if(!token) {
-    navigate("/")
-  }
-}, [])
+  const navigate = useNavigate();
 
+  //ACCESS CONTROL
+  useEffect(() => {
+    if (!token) {
+      navigate("/");
+    }
+  }, []);
 
   const { id: selectedElection } = useParams();
   const [candidates, setCandidates] = useState([]);
@@ -26,7 +25,6 @@ useEffect(() => {
   const voteCandidateModalShowing = useSelector(
     (state) => state.ui.voteCandidateModalShowing
   );
-
 
   const voterId = useSelector((state) => state?.vote?.currentVoter?.id);
 
@@ -112,7 +110,9 @@ useEffect(() => {
           </>
         )}
       </section>
-      {voteCandidateModalShowing && <ConfirmVote selectedElection={selectedElection} />}
+      {voteCandidateModalShowing && (
+        <ConfirmVote selectedElection={selectedElection} />
+      )}
     </>
   );
 };

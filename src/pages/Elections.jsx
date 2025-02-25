@@ -6,18 +6,18 @@ import { UiActions } from "../store/ui-slice";
 import UpdateElectionModal from "../components/UpdateElectionModal ";
 import axios from "axios";
 import Loader from "../components/Loader";
-import{useNavigate} from "react-router-dom"
+import { useNavigate } from "react-router-dom";
 
 const Elections = () => {
- const token = useSelector((state) => state?.vote?.currentVoter?.token);
-    const navigate = useNavigate()
+  const token = useSelector((state) => state?.vote?.currentVoter?.token);
+  const navigate = useNavigate();
 
-//ACCESS CONTROL
-useEffect(()=> {
-  if(!token) {
-    navigate("/")
-  }
-}, [])
+  //ACCESS CONTROL
+  useEffect(() => {
+    if (!token) {
+      navigate("/");
+    }
+  }, []);
 
   const [elections, setElections] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
@@ -29,7 +29,6 @@ useEffect(()=> {
     dispatch(UiActions.openElectionModal());
   };
 
- 
   const isAdmin = useSelector((state) => state?.vote?.currentVoter?.isAdmin);
   const electionModalShowing = useSelector(
     (state) => state.ui.electionModalShowing
@@ -53,7 +52,7 @@ useEffect(()=> {
     } catch (error) {
       console.log(error);
     }
-    setIsLoading(false)
+    setIsLoading(false);
   };
 
   useEffect(() => {
@@ -80,8 +79,6 @@ useEffect(()=> {
                 <Election key={election._id} {...election} />
               ))}
             </menu>
-
-
           )}
         </div>
       </section>

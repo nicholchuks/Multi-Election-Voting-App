@@ -1,18 +1,18 @@
-import React, {useEffect} from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
-import{useNavigate} from "react-router-dom"
+import { useNavigate } from "react-router-dom";
 
 const Congrat = () => {
-    const token = useSelector((state) => state?.vote?.currentVoter?.token);
-  
-  const navigate = useNavigate()
+  const token = useSelector((state) => state?.vote?.currentVoter?.token);
 
-//ACCESS CONTROL
-useEffect(()=> {
-  if(!token) {
-    navigate("/")
-  }
-}, [])
+  const navigate = useNavigate();
+
+  //ACCESS CONTROL
+  useEffect(() => {
+    if (!token) {
+      navigate("/");
+    }
+  }, []);
 
   return (
     <section className="congrats">
